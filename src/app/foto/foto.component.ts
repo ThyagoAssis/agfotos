@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FotoComponent implements OnInit {
   title = "Minhas Fotos";
-  fotos = [];
-  constructor() {
+  fotos: Object[] = [];
 
-   }
+  constructor(http: HttpClient) {
+    http.get<Object[]>('http://localhost:3000/fotos/').subscribe(caixa => {this.fotos = caixa, console.log(caixa)});
+    }
 
   ngOnInit(): void {
   }
