@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Foto } from './foto';
 
 @Component({
   selector: 'app-foto',
@@ -8,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FotoComponent implements OnInit {
   title = "Minhas Fotos";
-  fotos: Object[] = [];
+  
 
-  constructor(http: HttpClient) {
-    http.get<Object[]>('http://localhost:3000/fotos/').subscribe(caixa => {this.fotos = caixa, console.log(caixa)});
-    }
+  @Input() img = "";
+  @Input() titulo = "";
+  @Input() desc = ""
 
+ 
   ngOnInit(): void {
   }
 

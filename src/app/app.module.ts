@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FotoComponent } from './foto/foto.component';
-
 import { HeaderComponent } from './header/header.component';
+
+import { FotografiaModule } from './fotografia/fotografia.module';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FotoComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    BrowserModule,    
+    AppRoutingModule,    
+    FotografiaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
