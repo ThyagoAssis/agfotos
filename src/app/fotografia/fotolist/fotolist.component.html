@@ -1,12 +1,16 @@
 
-<app-fotos [fotos]="fotos"></app-fotos>
-
-<!-- <app-foto 
-  *ngFor="let foto of fotos" 
-  [img]="foto.img" 
-  [titulo]="foto.titulo" 
-  [desc]="foto.desc">
-</app-foto> -->
-
-
-
+<!-- <app-fotos [fotos]="fotos"></app-fotos> -->
+<div class="container mt-5 mb-2 ">
+  <div class="row">
+    <div class="col col-md-4" *ngFor="let foto of fotos; index as i">
+      <!--Fotos pares-->
+      <div class="card shadow mt-3 text-light bg-dark" style="width: 18rem;" >
+        <img class="card-img-top" [src]="foto.img" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h3 class="card-title text-center">{{ foto.titulo }}</h3>
+        </div>
+        <!--Fim fotos PAres-->
+      </div>
+    </div>
+  </div>
+</div>
