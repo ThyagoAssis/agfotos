@@ -1,5 +1,6 @@
 
 <!-- <app-fotos [fotos]="fotos"></app-fotos> -->
+<<<<<<< HEAD
 <div class="container">
   <app-foto  class="mt-3 mb-3"
     *ngFor="let foto of fotos" 
@@ -12,3 +13,19 @@
 
 
 
+=======
+<div class="container mt-5 mb-2 ">
+  <div class="row">
+    <div class="col col-md-4" *ngFor="let foto of fotos; index as i">
+      <!--Fotos pares-->
+      <div class="card shadow mt-3 text-light bg-dark" style="width: 18rem;" >
+        <img class="card-img-top" [src]="foto.img" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h3 class="card-title text-center">{{ foto.titulo }}</h3>
+        </div>
+        <!--Fim fotos PAres-->
+      </div>
+    </div>
+  </div>
+</div>
+>>>>>>> aae86a35f234083cf8d6c79d070201b38719234a
