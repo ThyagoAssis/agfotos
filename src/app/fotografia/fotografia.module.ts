@@ -6,6 +6,7 @@ import { FotoComponent } from "./foto/foto.component";
 import { FotolistComponent } from './fotolist/fotolist.component';
 import { FotoformComponent } from './fotoform/fotoform.component';
 import { FotosComponent } from "./fotolist/fotos/fotos.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { FotosComponent } from "./fotolist/fotos/fotos.component";
     imports: [
         HttpClientModule,
         CommonModule,
+        FormsModule
     ]
     
 })

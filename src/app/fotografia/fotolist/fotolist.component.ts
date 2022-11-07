@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DataBaseService } from 'src/app/servicos/database.service';
 import { Foto } from '../foto/foto';
 
 @Component({
@@ -10,17 +11,11 @@ import { Foto } from '../foto/foto';
 export class FotolistComponent implements OnInit {
 
   
-  fotos: Foto[] = []; 
+  fotos: Foto[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private database: DataBaseService){ }
 
   ngOnInit(): void {
-    this.http
-    .get<Foto[]>('http://localhost:3000/fotos/')
-    .subscribe(
-      caixa => this.fotos = caixa,
-      /* err => console.log(err.message )*/
-      );
+    this.database.getFoto().subscribe(results => this.fotos = results)
   }
-
 }

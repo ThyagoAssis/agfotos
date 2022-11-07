@@ -1,12 +1,14 @@
 
-<app-fotos [fotos]="fotos"></app-fotos>
+<!-- <app-fotos [fotos]="fotos"></app-fotos> -->
+<div class="container">
+  <app-foto  class="mt-3 mb-3"
+    *ngFor="let foto of fotos" 
+    [img]="foto.img" 
+    [titulo]="foto.titulo" 
+    [desc]="foto.desc">
+  </app-foto>
+</div>
 
-<!-- <app-foto 
-  *ngFor="let foto of fotos" 
-  [img]="foto.img" 
-  [titulo]="foto.titulo" 
-  [desc]="foto.desc">
-</app-foto> -->
 
 
 
