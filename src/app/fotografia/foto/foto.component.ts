@@ -8,16 +8,10 @@ import { Foto } from './foto';
   styleUrls: ['./foto.component.css']
 })
 export class FotoComponent implements OnInit {
-  title = "Minhas Fotos";
   
-
   @Input() img = "";
-  @Input() titulo = "";
-  @Input() desc = ""
-
  
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 
 

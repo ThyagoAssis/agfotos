@@ -1,7 +1,6 @@
 export interface Foto{
     id: number,
-    img: string,
-    desc: string,
+    img: string,    
     titulo: string
 
 }

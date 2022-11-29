@@ -9,13 +9,12 @@ import { Foto } from '../foto/foto';
   styleUrls: ['./fotolist.component.css']
 })
 export class FotolistComponent implements OnInit {
-
   
   fotos: Foto[] = [];
 
-  constructor(private database: DataBaseService){ }
+  constructor(private httpClient: HttpClient){ }
 
   ngOnInit(): void {
-    this.database.getFoto().subscribe(results => this.fotos = results)
+    this.httpClient.get<Foto[]>('http://localhost:3000/fotos').subscribe(results => this.fotos = results);
   }
 }

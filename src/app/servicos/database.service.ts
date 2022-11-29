@@ -20,7 +20,7 @@ export class DataBaseService{
     }
 
     postFoto(valor:any){
-        this.http.post('http://localhost:3000/fotos/', JSON.stringify(valor.value), this.httpOptions).subscribe();
+        this.http.post(this.API, JSON.stringify(valor.value), this.httpOptions).subscribe();
     }
 
 }

@@ -4,32 +4,27 @@ import { NgModule } from "@angular/core";
 
 import { FotoComponent } from "./foto/foto.component";
 import { FotolistComponent } from './fotolist/fotolist.component';
+
 import { FotoformComponent } from './fotoform/fotoform.component';
-import { FotosComponent } from "./fotolist/fotos/fotos.component";
-<<<<<<< HEAD
 import { FormsModule } from "@angular/forms";
-=======
 import { SharedModule } from "../shared/shared.module";
->>>>>>> aae86a35f234083cf8d6c79d070201b38719234a
+
 
 @NgModule({
     declarations: [
         FotoComponent,
         FotolistComponent,
-        FotoformComponent,
-        FotosComponent
+        FotoformComponent,        
     ],
-<<<<<<< HEAD
-    imports: [
-        HttpClientModule,
-        CommonModule,
-        FormsModule
+
+    imports: [       
+        SharedModule    
+    ],
+
+    exports:[
+        FotoformComponent,
+        FotoComponent,
+        FotolistComponent
     ]
-    
-=======
-
-    imports:[SharedModule]
-
->>>>>>> aae86a35f234083cf8d6c79d070201b38719234a
 })
 export class FotografiaModule{}
