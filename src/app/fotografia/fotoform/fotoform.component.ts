@@ -1,4 +1,3 @@
-import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DataBaseService } from 'src/app/servicos/database.service';
 

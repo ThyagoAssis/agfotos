@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 
 import { FotografiaModule } from './fotografia/fotografia.module';
 import { CoreModule } from './core/core.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { CoreModule } from './core/core.module';
   ],
   imports: [
     CoreModule,
-    FotografiaModule
+    FotografiaModule,
+    AppRoutingModule
       
   ],
   providers: [],
