@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataBaseService } from 'src/app/servicos/database.service';
+import { Router } from '@angular/router';
+import { DatabaseService } from 'src/app/servicos/database.service';
+
 
 @Component({
   selector: 'app-fotoform',
@@ -8,20 +10,16 @@ import { DataBaseService } from 'src/app/servicos/database.service';
 })
 export class FotoformComponent implements OnInit {
 
-/*   httpOptions = {
-    headers: new HttpHeaders({'Content-Type' : 'application/json'})
-  }  */
-  
   constructor(
-      private databse: DataBaseService
+      private banco: DatabaseService,
+      private router: Router
     ) { }
 
   ngOnInit(): void {
   }
 
   submit(valor:any){
-    console.log(valor.value);
-    this.databse.postFoto(valor)
-    /* this.http.post('http://localhost:3000/fotos/', JSON.stringify(valor.value), this.httpOptions).subscribe(); */
+    this.banco.postFotos(valor.value);
+    this.router.navigate(['/foto']);
   }
 }

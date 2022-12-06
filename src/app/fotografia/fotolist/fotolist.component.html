@@ -1,12 +1,13 @@
 
 <div class="container mt-5 mb-2 ">
   <div class="row">
-    <div class="col s12 m7" *ngFor="let foto of fotos">
+    <div class="col-4" *ngFor="let foto of fotos">
       <div class="card">
         <div class="card-image">
           <app-foto [img]="foto.img"></app-foto>
-          <span class="card-title">{{foto.titulo}}</span>
-        </div>    
+          <span class="card-title">{{foto.titulo}}</span>         
+        </div>
+        <button class="btn red darken-4" (click)="deletar(foto.id)">Deletar</button>
       </div>
     </div>
   </div>
